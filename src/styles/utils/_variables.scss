@@ -3,8 +3,25 @@
  */
 
 $color-white: #E5E1D8;
+$color-white-light: #F6F5F3;
 $color-white-dark: #D6D1C9;
 $color-white-darkness: #C9C1B0;
 
 $color-brown: #9C6F69;
 $color-brown-darkness: #201817;
+
+/*
+ *   Breakpoints view
+ */
+
+$layout-breakpoints: (
+    extraSmall: 0px,
+    small: 350px,
+    bigSmall: 475px,
+    extraMedium: 600px,
+    medium: 725px,
+    bigMedium: 850px,
+    extraLarge: 1300px,
+    large: 1750px,
+    bigLarge: 5000px,
+);

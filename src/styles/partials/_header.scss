@@ -1,0 +1,37 @@
+#header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 1140px;
+    margin: 0 auto;
+
+    @include media_querie(extraSmall, extraLarge) {
+        width: 90%;
+    }
+
+    .imagotype {
+        display: flex;
+
+        img {
+            margin: auto;
+        }
+    }
+
+    .menu-icon {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+        p {
+            margin-right: 15px;
+            font-size: 15px;
+            text-transform: capitalize;
+
+            @include media_querie(extraSmall, bigSmall) {
+                display: none;
+            }
+        }
+    }
+}
