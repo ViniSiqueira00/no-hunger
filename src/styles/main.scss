@@ -9,11 +9,14 @@
 @import 'reset';
 
 /*
- *   Partials styles
+ *   Components styles
  */
-@import 'partials/all';
+@import 'components/all';
 
 /*
  *   Pages styles
  */
 @import 'pages/home';
+@import 'pages/about';
+@import 'pages/pictures';
+@import 'pages/members';

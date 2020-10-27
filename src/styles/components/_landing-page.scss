@@ -1,0 +1,124 @@
+.landing {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 1140px;
+    margin: 150px auto;
+
+    @include media_querie(extraSmall, bigSmall) {
+        width: 90%;
+        margin: 75px auto;
+    }
+
+    @include media_querie(bigSmall, medium) {
+        width: 90%;
+    }
+
+    @include media_querie(medium, bigMedium) {
+        width: 675px;
+    }
+
+    @include media_querie(bigMedium, extraLarge) {
+        width: 800px;
+    }
+
+    .number-title {
+        font: 500 200px Spectral, serif;
+        line-height: 1;
+        color: transparent;
+        -webkit-text-stroke-width: 4px;
+        -webkit-text-stroke-color: $color-brown;
+
+        @include media_querie(extraSmall, bigSmall) {
+            margin-bottom: 30px;
+            font-size: 100px;
+            -webkit-text-stroke-width: 3px;
+        }
+
+        @include media_querie(bigSmall, medium) {
+            margin-bottom: 30px;
+            font-size: 120px;
+            -webkit-text-stroke-width: 3px;
+        }
+
+        @include media_querie(medium, extraLarge) {
+            margin-bottom: 30px;
+            font-size: 160px;
+            -webkit-text-stroke-width: 3px;
+        }
+    }
+
+    .box {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        width: 100%;
+
+        @include media_querie(extraSmall, bigSmall) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        @include media_querie(bigSmall, medium) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .text-title {
+            font-size: 200px;
+            font-weight: 700;
+            line-height: 1;
+            text-transform: uppercase;
+
+            @include media_querie(extraSmall, bigSmall) {
+                margin-bottom: 40px;
+                font-size: 65px;
+            }
+
+            @include media_querie(bigSmall, medium) {
+                font-size: 90px;
+            }
+
+            @include media_querie(medium, extraLarge) {
+                font-size: 130px;
+            }
+        }
+
+        .description {
+            position: absolute;
+            top: 0;
+            right: 0;
+            text-align: right;
+            line-height: 1.5;
+            font-size: 25px;
+
+            @include media_querie(extraSmall, bigSmall) {
+                position: relative;
+                width: 275px;
+                font-size: 15px;
+                text-align: left;
+            }
+
+            @include media_querie(bigSmall, medium) {
+                font-size: 15px;
+            }
+
+            @include media_querie(medium, extraLarge) {
+                font-size: 20px;
+            }
+        }
+
+        .scroll-effect {
+            display: flex;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+
+            @include media_querie(extraSmall, small) {
+                display: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,179 @@
+#page-pictures {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('../../images/background-mask-light.png');
+    background-repeat: repeat;
+    padding: 25px 0 50px 0;
+
+    .content {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin: auto;
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, calc((100% - 20px) / 3));
+            grid-gap: 50px 10px;
+            width: 1140px;
+            margin: 150px auto;
+
+            @include media_querie(extraSmall, bigSmall) {
+                grid-template-columns: 100%;
+                grid-gap: 40px 0;
+                width: 90%;
+                margin: 75px auto;
+            }
+
+            @include media_querie(bigSmall, medium) {
+                grid-template-columns: repeat(2, calc((100% - 10px) / 2));
+                grid-gap: 40px 10px;
+                width: 90%;
+            }
+
+            @include media_querie(medium, bigMedium) {
+                width: 675px;
+
+                > div:not(:nth-child(3n - 1)) {
+                    margin: 0 auto auto auto;
+                }
+
+                > div:nth-child(3n - 1) {
+                    margin: 50px auto 0 auto;
+                }
+            }
+
+            @include media_querie(bigMedium, extraLarge) {
+                width: 800px;
+
+                > div:not(:nth-child(3n - 1)) {
+                    margin: 0 auto auto auto;
+                }
+
+                > div:nth-child(3n - 1) {
+                    margin: 50px auto 0 auto;
+                }
+            }
+
+            @include media_querie(extraLarge, bigLarge) {
+                > div:not(:nth-child(3n - 1)) {
+                    margin: 0 auto auto auto;
+                }
+
+                > div:nth-child(3n - 1) {
+                    margin: 100px auto 0 auto;
+                }
+            }
+
+            .picture {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                margin: 0 auto 0 0;
+
+                @include media_querie(extraSmall, bigSmall) {
+                    width: 80%;
+
+                    &:nth-child(2n) {
+                        margin: 0 0 0 auto;
+                    }
+                }
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                background-color: rgba(0,0,0, .05);
+
+                @include media_querie(bigSmall, bigLarge) {
+                    &::before {
+                        content: "";
+                        height: 0;
+                        float: left;
+                        padding-bottom: calc( 100% / (373/528) );
+                    }
+
+                    &::after {
+                        content: "";
+                        display: block;
+                        clear: both;
+                    }
+                }
+
+
+                div {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    transform: rotate(90deg);
+
+                    @include media_querie(extraSmall, bigSmall) {
+                        padding: 20px 0;
+                        transform: unset;
+                    }
+
+                    .isotype {
+                        transform: rotate(-120deg);
+
+                        @include media_querie(extraSmall, small) {
+                            display: none;
+                        }
+
+                        @include media_querie(small, bigSmall) {
+                            transform: rotate(-30deg);
+                        }
+                    }
+
+                    .text {
+                        width: 130px;
+                        margin: 0 15px;
+                        line-height: 1;
+                        color: $color-brown;
+                        text-transform: uppercase;
+
+                        @include media_querie(extraSmall, extraLarge) {
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .effect-text {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 660px;
+            margin: 150px auto;
+
+            @include media_querie(extraSmall, bigSmall) {
+                width: 275px;
+                margin: 75px auto;
+            }
+
+            @include media_querie(bigSmall, medium) {
+                width: 450px;
+            }
+
+            p {
+                text-align: center;
+                line-height: 1.5;
+
+                @include media_querie(extraSmall, bigSmall) {
+                    font-size: 15px;
+                }
+
+                @include media_querie(bigSmall, medium) {
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}

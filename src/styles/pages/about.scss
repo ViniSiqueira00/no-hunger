@@ -1,0 +1,302 @@
+#page-about {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('../../images/background-mask-light.png');
+    background-repeat: repeat;
+    padding: 25px 0 50px 0;
+
+    .content {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin: auto;
+
+        .effect-text {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 660px;
+            margin: 150px auto;
+
+            @include media_querie(extraSmall, bigSmall) {
+                width: 275px;
+                margin: 75px auto;
+            }
+
+            @include media_querie(bigSmall, medium) {
+                width: 450px;
+            }
+
+            p {
+                text-align: center;
+                line-height: 1.5;
+
+                @include media_querie(extraSmall, bigSmall) {
+                    font-size: 15px;
+                }
+
+                @include media_querie(bigSmall, medium) {
+                    font-size: 15px;
+                }
+            }
+        }
+
+        .banner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+
+            img {
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+                object-position: center;
+
+                @include media_querie(extraSmall, bigSmall) {
+                    height: 330px;
+                }
+
+                @include media_querie(bigSmall, medium) {
+                    height: 375px;
+                }
+            }
+        }
+
+        .informations {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 1140px;
+            margin: 150px auto;
+
+            @include media_querie(extraSmall, bigSmall) {
+                flex-direction: column;
+                width: 90%;
+                margin: 75px auto;
+            }
+
+            @include media_querie(bigSmall, medium) {
+                flex-direction: column;
+                width: 90%;
+            }
+
+            @include media_querie(medium, bigMedium) {
+                width: 675px;
+            }
+
+            @include media_querie(bigMedium, extraLarge) {
+                width: 800px;
+            }
+
+            .info-text {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: space-between;
+                width: 500px;
+
+                @include media_querie(extraSmall, bigSmall) {
+                    width: 100%;
+                    margin-bottom: 50px;
+                }
+
+                @include media_querie(bigSmall, medium) {
+                    flex-direction: row;
+                    width: 100%;
+                    margin-bottom: 50px;
+                }
+
+                @include media_querie(medium, extraLarge) {
+                    flex: 1;
+                    margin-right: 5vw;
+                }
+
+                p {
+                    line-height: 1.5;
+                    margin-bottom: 40px;
+
+                    &:last-child {
+                        margin: 0;
+                    }
+
+                    @include media_querie(extraSmall, bigSmall) {
+                        margin-bottom: 25px;
+                        font-size: 15px;
+                    }
+
+                    @include media_querie(bigSmall, medium) {
+                        flex: 1;
+                        margin-bottom: 0;
+                        margin-right: 5vw;
+                        font-size: 15px;
+                    }
+
+                    @include media_querie(medium, extraLarge) {
+                        flex: 1;
+                        font-size: 15px;
+                    }
+                }
+            }
+
+            .topics {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+                width: 535px;
+
+                @include media_querie(extraSmall, bigSmall) {
+                    width: 100%;
+                }
+
+                @include media_querie(bigSmall, medium) {
+                    width: 100%;
+                }
+
+                @include media_querie(medium, extraLarge) {
+                    flex: 1;
+                }
+
+                .topic {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 100%;
+                    margin-bottom: 30px;
+
+                    &:last-child {
+                        margin: 0;
+                    }
+
+                    .number {
+                        font: 700 30px Spectral, serif;
+                    }
+
+                    .line {
+                        flex: 1;
+                        height: 3px;
+                        margin: auto 15px;
+                        background-color: $color-brown-darkness;
+                        opacity: .1;
+                    }
+
+                    .word {
+                        font-size: 75px;
+                        color: $color-brown;
+
+                        @include media_querie(extraSmall, small) {
+                            font-size: 35px;
+                        }
+
+                        @include media_querie(small, bigSmall) {
+                            font-size: 45px;
+                        }
+
+                        @include media_querie(bigSmall, medium) {
+                            font-size: 60px;
+                        }
+
+                        @include media_querie(medium, extraLarge) {
+                            font-size: 45px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .pictures {
+            display: grid;
+            grid-template-areas: 'pic01 pic02' 'text pic02';
+            grid-template-columns: 1fr auto;
+            width: 1140px;
+            margin: 150px auto;
+
+            @include media_querie(extraSmall, bigSmall) {
+                grid-template-areas: 'pic01' 'pic02' 'text';
+                grid-template-columns: 100%;
+                width: 90%;
+                margin: 75px auto;
+            }
+
+            @include media_querie(bigSmall, medium) {
+                grid-template-areas: 'pic01' 'pic02' 'text';
+                grid-template-columns: 100%;
+                width: 90%;
+            }
+
+            @include media_querie(medium, bigMedium) {
+                grid-template-columns: 60% 40%;
+                grid-template-columns: 55% 40%;
+                grid-gap: 0 5%;
+                width: 675px;
+            }
+
+            @include media_querie(bigMedium, extraLarge) {
+                grid-template-columns: 55% 40%;
+                grid-gap: 0 5%;
+                width: 800px;
+            }
+
+            .picture-01 {
+                grid-area: pic01;
+                width: 615px;
+                margin-bottom: 215px;
+
+                @include media_querie(extraSmall, bigSmall) {
+                    width: 100%;
+                    margin-bottom: 25px;
+                }
+
+                @include media_querie(bigSmall, medium) {
+                    width: 100%;
+                    margin-bottom: 25px;
+                }
+
+                @include media_querie(medium, extraLarge) {
+                    width: 100%;
+                }
+            }
+
+            .picture-02 {
+                grid-area: pic02;
+                width: 475px;
+                margin-top: 150px;
+
+                @include media_querie(extraSmall, bigSmall) {
+                    width: 100%;
+                    margin-top: 0;
+                    margin-bottom: 75px;
+                }
+
+                @include media_querie(bigSmall, medium) {
+                    width: 100%;
+                    margin-top: 0;
+                    margin-bottom: 75px;
+                }
+
+                @include media_querie(medium, extraLarge) {
+                    width: 100%;
+                }
+            }
+
+            p {
+                grid-area: text;
+                width: 300px;
+                line-height: 1.5;
+
+                @include media_querie(extraSmall, bigSmall) {
+                    width: 100%;
+                }
+
+                @include media_querie(bigSmall, medium) {
+                    width: 100%;
+                }
+
+                @include media_querie(medium, extraLarge) {
+                    width: 70%;
+                }
+            }
+        }
+    }
+}

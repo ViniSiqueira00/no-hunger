@@ -1,49 +1,26 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-import imagotype from '../images/imagotype.svg';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import ProgressBar from '../components/ProgressBar';
+import ScrollEffect from '../components/ScrollEffect';
+import Menu from '../components/Menu';
+
 import isotypeBrown from '../images/isotype-brown.svg';
-import menuIcon from '../images/menu-icon.svg';
-import arrowTop from '../images/arrow-top.svg';
 import coverBanner from '../images/banner-01.png';
 import pictureBanner from '../images/banner-02.png';
 import arrowRightBrown from '../images/arrow-right-brown.svg';
 import arrowRightWhite from '../images/arrow-right-white.svg';
-import facebookIcon from '../images/social-facebook.svg';
-import instagramIcon from '../images/social-instagram.svg';
-import linkedinIcon from '../images/social-linkedin.svg';
-import behanceIcon from '../images/social-behance.svg';
 
 function Home() {
     return (
         <div id="page-home">
-            <div className="progress-bar">
-                <div className="progress">
-                    <div className="labels">
-                        <p>01.</p>
-                        <p>02.</p>
-                        <p>03.</p>
-                        <p>04.</p>
-                    </div>
-                    <div className="bars">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                </div>
-            </div>
+            <Menu />
 
-            <header id="header">
-                <div className="imagotype">
-                    <img src={imagotype} alt="imagotype for base rock"/>
-                </div>
-                <div className="menu-icon">
-                    <p>menu</p>
-                    <img src={menuIcon} alt="menu icon" />
-                </div>
-            </header>
+            <ProgressBar />
+
+            <Header />
 
             <main className="content">
                 <section className="landing">
@@ -58,12 +35,7 @@ function Home() {
                             </span>
                         </div>
 
-                        <div className="scroll-effect">
-                            <img src={arrowTop} alt="arrow to top icon"/>
-                            <span className="mouse">
-                                <span className="scroll"></span>
-                            </span>
-                        </div>
+                        <ScrollEffect />
                     </div>
 
                     <div className="banner">
@@ -103,7 +75,7 @@ function Home() {
                         </div>
                     </div>
                     <div className="image">
-                        <img src={pictureBanner} alt="imagotype for base rock"/>
+                        <img src={pictureBanner} alt="banner"/>
                     </div>
                 </section>
 
@@ -152,16 +124,7 @@ function Home() {
                 </section>
             </main>
 
-            <footer id="footer">
-                <div className="social-media">
-                    <img src={facebookIcon} alt="facebook icon"/>
-                    <img src={instagramIcon} alt="instagram icon"/>
-                    <img src={linkedinIcon} alt="linkedin icon"/>
-                    <img src={behanceIcon} alt="behance icon"/>
-                </div>
-                <p className="link">terms & conditions</p>
-                <p className="copyright">© COPYRIGHT nunc a odio id magna pharetra lacinia 2020</p>
-            </footer>
+            <Footer />
         </div>
     );
 }
