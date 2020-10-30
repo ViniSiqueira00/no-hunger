@@ -6,6 +6,7 @@ import About from './pages/About';
 import Pictures from './pages/Pictures';
 import Members from './pages/Members';
 import Contribute from './pages/Contribute';
+import Test from './pages/Test';
 
 function Routes() {
     return (
@@ -16,6 +17,8 @@ function Routes() {
                 <Route path="/pictures" component={Pictures} />
                 <Route path="/members" component={Members} />
                 <Route path="/contribute" component={Contribute} />
+
+                <Route path="/test" component={Test} />
             </Switch>
         </BrowserRouter>
     );
