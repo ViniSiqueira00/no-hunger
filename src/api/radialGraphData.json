@@ -1,14 +1,14 @@
 [
   {
-    "name": "arnare",
-    "quantity": 50
+    "label": "arnare",
+    "angle": 50
   },
   {
-    "name": "nabrist",
-    "quantity": 25
+    "label": "nabrist",
+    "angle": 25
   },
   {
-    "name": "amotre",
-    "quantity": 25
+    "label": "amotre",
+    "angle": 25
   }
 ]
