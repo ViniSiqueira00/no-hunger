@@ -1,7 +1,7 @@
 {
-  "labels": ['red', 'green', 'blue'],
+  "labels": ["red", "green", "blue"],
   "datasets": [{
       "data": [25, 25, 50],
-      "backgroundColor": ['#D6D1C9', '#C9C1B0', '#9C6F69'],
+      "backgroundColor": ["#D6D1C9", "#C9C1B0", "#9C6F69"],
   }],
 }
