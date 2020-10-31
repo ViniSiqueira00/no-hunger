@@ -5,6 +5,7 @@ import Footer from '../components/Footer';
 import LandingPage from '../components/LandingPage';
 
 import RadialGraph from '../components/RadialGraph';
+import BarGraph from '../components/BarGraph';
 
 function Contribute() {
     return (
@@ -36,7 +37,7 @@ function Contribute() {
                         </label>
                         <div className="bars">
                             <span className="total"></span>
-                            <span className="quantity"></span>
+                            <BarGraph name='teste'/>
                         </div>
                     </div>
                     <div className="statistic">
