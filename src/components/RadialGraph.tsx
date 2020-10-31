@@ -1,24 +1,41 @@
-import React from 'react';
-import {RadialChart} from 'react-vis';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import {Pie} from 'react-chartjs-2';
 
-interface GraphData {
-    angle: number;
-    label: string;
-    style?: React.CSSProperties;
-}
+function RadialGraph() {
+    const [graphData, setGraphData] = useState({});
 
-interface ObjectProps {
-    data: GraphData[];
-}
+    useEffect(() => {
+        async function fetchData() {
+            const result = await axios.get('https://raw.githubusercontent.com/ViniSiqueira00/no-hunger/master/src/api/radialGraphData.json');
+            console.log(result);
+            setGraphData(result.data);
+            return result;
+        }
 
-function RadialGraph(props : ObjectProps) {
+        fetchData();
+    }, [])
+
+    // const data = {
+    //     labels: ['red', 'green', 'blue'],
+    //     datasets: [{
+    //         data: [25, 25, 50],
+    //         backgroundColor: ['#D6D1C9', '#C9C1B0', '#9C6F69'],
+    //     }],
+    // }
+
     return (
-        <div id="radial-chart">
-            <RadialChart
-                data={props.data}
-                width={500}
-                height={500} />
-        </div>
+        <Pie
+            data={{}}
+            width={1}
+            height={1}
+            options={{
+                legend: false,
+                responsiveAnimationDuration: 0,
+                maintainApectRatio: false,
+                aspectRatio: 1,
+            }}
+        />
     );
 }
 

@@ -4,34 +4,13 @@ import RadialGraph from '../components/RadialGraph';
 
 function Test() {
     return (
-        <div id="page-test">
-            <RadialGraph data={[
-                {
-                    angle: 25,
-                    label: '25%',
-                    style: {
-                        fill: '#D6D1C9',
-                        stroke: 'none'
-                    }
-                },
-                {
-                    angle: 25,
-                    label: '25%',
-                    style: {
-                        fill: '#C9C1B0',
-                        stroke: 'none'
-                    }
-                },
-                {
-                    angle: 50,
-                    label: '50%',
-                    style: {
-                        fill: '#9C6F69',
-                        stroke: 'none'
-                    }
-                }
-            ]} />
-        </div>
+        <>
+            <h1 style={{border: '1px solid rgba(0,0,0, .1)', margin: '0 0 20px 0', padding: '20px 30px', lineHeight: 1, fontSize: '30px', fontWeight: 700}}>Test radial graph</h1>
+
+            <div id="page-test">
+                <RadialGraph />
+            </div>
+        </>
     );
 }
 

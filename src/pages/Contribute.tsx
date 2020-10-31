@@ -4,6 +4,8 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import LandingPage from '../components/LandingPage';
 
+import RadialGraph from '../components/RadialGraph';
+
 function Contribute() {
     return (
         <div id="page-contribute">
@@ -21,8 +23,8 @@ function Contribute() {
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc a odio id magna pharetra lacinia non quis orci. In consequat nisi eu ante commodo, dignissim euismod quam rutrum. Pellentesque vel rhoncus elit, in lacinia augue. Aenean ornare blandit metus in bibendum. Sed vulputate ornare est.</p>
                         <p>Nullam quis mauris neque. Nunc eget mauris tempor sapien consequat rutrum vel et arcu. Quisque felis ipsum, fermentum a pulvinar at, interdum ac dui. Sed lacinia scelerisque pulvinar.</p>
                     </div>
-                    <div className="graphic">
-                        <svg></svg>
+                    <div className="graphic" id="graphic">
+                        <RadialGraph />
                     </div>
                 </section>
 

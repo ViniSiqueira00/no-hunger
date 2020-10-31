@@ -1,0 +1,19 @@
+#page-test {
+    width: 600px;
+    height: 600px;
+
+    @include media_querie(medium, extraLarge) {
+        width: 450px;
+        height: 450px;
+    }
+
+    @include media_querie(bigSmall, medium) {
+        width: 80vw;
+        height: 80vw;
+    }
+
+    @include media_querie(extraSmall, bigSmall) {
+        width: 90vw;
+        height: 90vw;
+    }
+}
