@@ -583,30 +583,51 @@
                             margin-bottom: 10px;
                         }
 
-                        .bar {
-                            display: block;
+                        .bars {
+                            position: relative;
                             width: 100%;
-                            height: 6px;
-                            background-color: $color-white-dark;
-                            border-radius: 10px;
+                            height: auto;
                             overflow: hidden;
 
-                            span {
+                            .total {
                                 display: block;
                                 width: 100%;
-                                height: 6px;
+                                height: 10px;
+                                background-color: $color-white-dark;
+
+                                @include media_querie(extraSmall, bigSmall) {
+                                    height: 6px;
+                                }
+
+                                @include media_querie(bigSmall, extraMedium) {
+                                    height: 6px;
+                                }
+
+                                @include media_querie(extraMedium, bigMedium) {
+                                    height: 6px;
+                                }
+                            }
+
+                            .quantity {
+                                position: absolute;
+                                top: 0;
+                                bottom: 0;
+                                left: 0;
+                                display: block;
+                                width: 100%;
+                                height: 10px;
                                 background-color: $color-brown;
 
-                                &.quantity-67 {
-                                    width: 67%;
+                                @include media_querie(extraSmall, bigSmall) {
+                                    height: 6px;
                                 }
 
-                                &.quantity-94 {
-                                    width: 94%;
+                                @include media_querie(bigSmall, extraMedium) {
+                                    height: 6px;
                                 }
 
-                                &.quantity-40 {
-                                    width: 40%;
+                                @include media_querie(extraMedium, bigMedium) {
+                                    height: 6px;
                                 }
                             }
                         }
@@ -629,7 +650,7 @@
                 }
             }
 
-            .graphic-pizza {
+            .graphic {
                 display: flex;
                 align-items: center;
                 justify-content: center;

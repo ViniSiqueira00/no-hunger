@@ -37,7 +37,7 @@ function Contribute() {
                         </label>
                         <div className="bars">
                             <span className="total"></span>
-                            <BarGraph name='teste'/>
+                            <BarGraph name='lorem'/>
                         </div>
                     </div>
                     <div className="statistic">
@@ -47,7 +47,7 @@ function Contribute() {
                         </label>
                         <div className="bars">
                             <span className="total"></span>
-                            <span className="quantity"></span>
+                            <BarGraph name='efficitur'/>
                         </div>
                     </div>
                     <div className="statistic">
@@ -57,7 +57,7 @@ function Contribute() {
                         </label>
                         <div className="bars">
                             <span className="total"></span>
-                            <span className="quantity"></span>
+                            <BarGraph name='lacinia'/>
                         </div>
                     </div>
                 </section>

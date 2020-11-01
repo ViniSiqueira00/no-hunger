@@ -6,6 +6,8 @@ import Footer from '../components/Footer';
 import ProgressBar from '../components/ProgressBar';
 import ScrollEffect from '../components/ScrollEffect';
 import Menu from '../components/Menu';
+import RadialGraph from '../components/RadialGraph';
+import BarGraph from '../components/BarGraph';
 
 import isotypeBrown from '../images/isotype-brown.svg';
 import coverBanner from '../images/banner-01.png';
@@ -96,21 +98,24 @@ function Home() {
                         <div className="bars">
                             <div className="box-bar">
                                 <label>2x vehicula efficitur turpis</label>
-                                <span className="bar">
-                                    <span className="quantity-67"></span>
-                                </span>
+                                <div className="bars">
+                                    <span className="total"></span>
+                                    <BarGraph name='lorem'/>
+                                </div>
                             </div>
                             <div className="box-bar">
                                 <label>4,5x quis feugiat arcu</label>
-                                <span className="bar">
-                                    <span className="quantity-94"></span>
-                                </span>
+                                <div className="bars">
+                                    <span className="total"></span>
+                                    <BarGraph name='efficitur'/>
+                                </div>
                             </div>
                             <div className="box-bar">
                                 <label>HIGT pharetra lacinia</label>
-                                <span className="bar">
-                                    <span className="quantity-40"></span>
-                                </span>
+                                <div className="bars">
+                                    <span className="total"></span>
+                                    <BarGraph name='lacinia'/>
+                                </div>
                             </div>
                         </div>
                         <Link to="/contribute" className="button">
@@ -118,8 +123,8 @@ function Home() {
                             <img src={arrowRightBrown} alt="arrow to right icon"/>
                         </Link>
                     </div>
-                    <div className="graphic-pizza">
-                        X
+                    <div className="graphic" id="graphic">
+                        <RadialGraph />
                     </div>
                 </section>
             </main>
