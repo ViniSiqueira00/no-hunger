@@ -18,8 +18,6 @@ import arrowRightWhite from '../images/arrow-right-white.svg';
 function Home() {
     return (
         <div id="page-home">
-            <Menu />
-
             <ProgressBar />
 
             <Header />

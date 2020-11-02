@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {Link} from 'react-router-dom';
 
 import imagotype from '../images/imagotype-white.svg';
@@ -8,16 +8,28 @@ import instagramIcon from '../images/social-instagram.svg';
 import linkedinIcon from '../images/social-linkedin.svg';
 import behanceIcon from '../images/social-behance.svg';
 
-function Menu() {
+interface MenuProps {
+    style?: object;
+    state: {
+        variable: boolean;
+        setter: React.Dispatch<React.SetStateAction<boolean>>
+    }
+}
+
+function Menu(props: MenuProps) {
+    function handleCloseMenu() {
+        props.state.setter(false);
+    }
+
     return (
-        <section id="menu">
+        <section id="menu" style={props.style}>
             <img className="mark" src={isotype} alt="isotype for base rock"/>
 
             <div className="header">
                 <div className="imagotype">
                     <img src={imagotype} alt="imagotype for base rock"/>
                 </div>
-                <div className="menu-icon">
+                <div className="menu-icon" onClick={handleCloseMenu}>
                     <p>fechar</p>
                     <span className="icon">
                         <span></span>
