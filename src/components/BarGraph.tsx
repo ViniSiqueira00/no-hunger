@@ -22,9 +22,7 @@ function BarGraph(props: Props) {
         setWidthBar(barPercentage);
     }
 
-    useEffect(() => {
-        fetchData();
-    }, []);
+    useEffect(() => {fetchData()});
 
     return (
         <span className="quantity" style={{width: `${widthBar}%`}}></span>

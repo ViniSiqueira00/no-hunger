@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import Slider from '@material-ui/core/Slider';
 
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -7,7 +8,13 @@ import LandingPage from '../components/LandingPage';
 import RadialGraph from '../components/RadialGraph';
 import BarGraph from '../components/BarGraph';
 
+import LabelInputSlider from '../components/LabelInputSlider';
+
 function Contribute() {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    });
+
     return (
         <div id="page-contribute">
             <Header />
@@ -88,15 +95,21 @@ function Contribute() {
                                 </div>
                                 <div className="input-slider">
                                     <div className="labels">
-                                        <label>$0</label>
+                                        <label>$1k</label>
                                         <label>$10k</label>
                                     </div>
                                     <div className="slider">
-                                        <span className="total"></span>
-                                        <span className="quantity">
-                                            <span className="bar"></span>
-                                            <span className="sphere"></span>
-                                        </span>
+                                        <Slider
+                                            defaultValue={5}
+                                            ValueLabelComponent={LabelInputSlider}
+                                            getAriaValueText={(value: number) => `${value}`}
+                                            aria-labelledby="discrete-slider"
+                                            valueLabelDisplay="auto"
+                                            step={1}
+                                            marks
+                                            min={1}
+                                            max={10}
+                                        />
                                     </div>
                                 </div>
                                 <input className="full" type="text" placeholder="Card Number"/>

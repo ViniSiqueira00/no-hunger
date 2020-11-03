@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -14,6 +14,10 @@ import profile06 from '../images/profile-06.png';
 import profile07 from '../images/profile-07.png';
 
 function Members() {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    });
+
     return (
         <div id="page-members">
             <Header />

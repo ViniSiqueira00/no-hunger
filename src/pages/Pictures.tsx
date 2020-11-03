@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -16,6 +16,10 @@ import isotypeBrown from '../images/isotype-brown.svg';
 import arrowRightBrown from '../images/arrow-right-brown.svg';
 
 function Pictures() {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    });
+
     return (
         <div id="page-pictures">
             <Header />

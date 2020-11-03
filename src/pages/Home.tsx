@@ -1,11 +1,9 @@
-import React from 'react';
-import {Link} from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import ProgressBar from '../components/ProgressBar';
 import ScrollEffect from '../components/ScrollEffect';
-import Menu from '../components/Menu';
 import RadialGraph from '../components/RadialGraph';
 import BarGraph from '../components/BarGraph';
 
@@ -16,10 +14,12 @@ import arrowRightBrown from '../images/arrow-right-brown.svg';
 import arrowRightWhite from '../images/arrow-right-white.svg';
 
 function Home() {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    });
+
     return (
         <div id="page-home">
-            <ProgressBar />
-
             <Header />
 
             <main className="content">

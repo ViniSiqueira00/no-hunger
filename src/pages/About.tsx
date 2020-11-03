@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -9,6 +9,10 @@ import myanmar from '../images/myanmar.png';
 import children from '../images/children.png';
 
 function About() {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    });
+
     return (
         <div id="page-about">
             <Header />
